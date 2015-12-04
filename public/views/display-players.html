@@ -1,0 +1,27 @@
+            <section ng-controller="PlayersController" ng-init="find()">
+              <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <div class="md-toolbar-tools" layout="row">
+                  <label flex>List of Players</label>
+                  <md-input-container flex>
+                      <label>Filter by Name</label>
+                      <input ng-model="player.name">
+                    </md-input-container>
+                </div>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-grid-list layout="row" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4" md-row-height-gt-md="1:1" md-row-height="1:1" md-gutter="12px">
+                    
+                    <md-grid-tile class="md-whiteframe-1dp" ng-repeat="player in players|filter: player.name">
+                      <img style="height: 100%; width: 100%"  ng-src="{{player.name}}">
+                      <md-grid-tile-footer layout-align="center center">
+                        <a id="footer" ng-href="#!/players/{{player._id}}">
+                          {{player.name}}
+                        </a>
+                      </md-grid-tile-footer>
+                    </md-grid-tile>
+                    
+                  </md-grid-list>
+                </md-card-content>
+              </md-card>
+          </section>

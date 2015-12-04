@@ -1,0 +1,86 @@
+            <section ng-app="Player_App" ng-controller="PlayersController">
+              <form ng-submit="create()" novalidate>
+                <input ng-model="name" type="hidden"/>
+                <input ng-model="position" type="hidden"/>
+                <input ng-model="overallRating" type="hidden"/>
+                <input ng-model="speed" type="hidden"/>
+                <input ng-model="awareness" type="hidden"/>
+                <input ng-model="strength" type="hidden"/>
+                <input ng-model="agility" type="hidden"/>
+                <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                  <h2 class="md-toolbar-tools">
+                    <span>Create New Player</span>
+                  </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Name</label>
+                    <input ng-model="name" id="name" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Position</label>
+                    <md-select ng-model="position" id="position" required>
+                     <md-option value="Qb">Qb</md-option>
+                      <md-option value="Rb">Rb</md-option>
+                      <md-option value="Fb">Fb</md-option>
+                      <md-option value="Wr">Wr</md-option>
+                      <md-option value="Te">Te</md-option>
+                      <md-option value="Lt">Lt</md-option>
+                      <md-option value="Lg">Lg</md-option>
+                      <md-option value="C">C</md-option>
+                      <md-option value="Rg">Rg</md-option>
+                      <md-option value="Rt">Rt</md-option>
+                      <md-option value="Dt">Dt</md-option>
+                      <md-option value="De">De</md-option>
+                      <md-option value="Lolb">Lolb</md-option>
+                      <md-option value="Rolb">Rolb</md-option>
+                      <md-option value="Mlb">Mlb</md-option>
+                      <md-option value="Cb">Cb</md-option>
+                      <md-option value="Ss">Ss</md-option>
+                      <md-option value="Fs">Fs</md-option>
+                      <md-option value="K">K</md-option>
+                      <md-option value="P">P</md-option>
+                    </md-select>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Overall Rating</label>
+                    <input ng-model="overallRating" id="overallRating" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Speed</label>
+                    <input ng-model="speed" id="speed" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Awareness</label>
+                    <input ng-model="awareness" id="awareness" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Strength</label>
+                    <input ng-model="strength" id="strength" required>
+                  </md-input-container>
+                  
+                  
+                  <md-input-container>
+                    <label>Agility</label>
+                    <input ng-model="agility" id="agility">
+                  </md-input-container>
+                    
+                  </md-content>
+                 <md-button class="md-raised md-primary" type="submit">
+                    Submit
+                  </md-button>
+                  <div ng-bind="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </md-card>
+              </form>
+          </section>

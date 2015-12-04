@@ -1,0 +1,79 @@
+    <section ng-controller="PlayersController" ng-init="findOne()">
+              <md-card>
+                <form ng-submit="update()" novalidate>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  <span>Edit Player</span>
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Player  Name</label>
+                    <input ng-model="player.name" type="name">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Position</label>
+                    <md-select ng-model="plyer.position" type="position">
+                      <md-option value="Qb">Qb</md-option>
+                      <md-option value="Rb">Rb</md-option>
+                      <md-option value="Fb">Fb</md-option>
+                      <md-option value="Wr">Wr</md-option>
+                      <md-option value="Te">Te</md-option>
+                      <md-option value="Lt">Lt</md-option>
+                      <md-option value="Lg">Lg</md-option>
+                      <md-option value="C">C</md-option>
+                      <md-option value="Rg">Rg</md-option>
+                      <md-option value="Rt">Rt</md-option>
+                      <md-option value="Dt">Dt</md-option>
+                      <md-option value="De">De</md-option>
+                      <md-option value="Lolb">Lolb</md-option>
+                      <md-option value="Rolb">Rolb</md-option>
+                      <md-option value="Mlb">Mlb</md-option>
+                      <md-option value="Cb">Cb</md-option>
+                      <md-option value="Ss">Ss</md-option>
+                      <md-option value="Fs">Fs</md-option>
+                      <md-option value="K">K</md-option>
+                      <md-option value="P">P</md-option>
+                      
+                    </md-select>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Overall Rating</label>
+                    <input ng-model="player.overallRating">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Speed</label>
+                    <input data-ng-model="player.speed">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Awareness</label>
+                    <input ng-model="player.awareness">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Strength</label>
+                    <input ng-model="player.strength">
+                  </md-input-container>
+                </md-content>
+                
+                <md-input-container>
+                  <label>Agility</label>
+                  <input ng-model="player.agility">
+                </md-input-container>
+                  
+               <md-button class="md-raised md-primary" type="submit" value="Update">
+                  Submit
+                </md-button>
+                <div ng-show="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </form>
+              </md-card>
+          </section>
